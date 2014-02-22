@@ -1,0 +1,217 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-mjtozm');
+	src:url('../fonts/icomoon.eot?#iefix-mjtozm') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-mjtozm') format('woff'),
+		url('../fonts/icomoon.ttf?-mjtozm') format('truetype'),
+		url('../fonts/icomoon.svg?-mjtozm#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+azul = #22BCE0
+gris_oscuro = #444
+gris_texto = #7A7A7A
+naranja = #F65527
+a
+	text-decoration none
+body
+	background #E8E8E8
+	color gris_oscuro
+	font-family Arial
+	font-size 16px
+
+footer
+	background-color naranja
+	color rgba(white, 0.5)
+	padding 0.3em 0
+	text-align center
+	width 100%
+	.mejor
+		display block
+		&:after
+		&:before
+			content " - "
+	.power
+		font-weight normal
+
+header
+	background-color gris_oscuro
+	box-shadow rgba(0,0,0,0.2) 0 5px 0px
+	color white
+	overflow hidden
+	padding 0.5em
+	position relative
+	z-index 1
+	.logo
+		border-right solid 1px azul
+		float left
+		padding-right 0.5em
+		img
+			width 80px
+
+	.titular
+		margin 0 70px 0 90px
+		padding 0 0.5em
+		
+		h1
+			font-size 18px
+			font-weight normal
+		
+		div
+			font-style italic
+			.filtro
+				color azul
+				font-size 14px
+				font-weight bold
+
+			#publicar
+				background-color naranja
+				border none
+				padding 0.1em 0.4em 0.1em 0.8em
+				float right
+				text-shadow gris_oscuro 2px 2px 2px
+				&:before
+					content "\e600"
+					font-family icomoon
+					position relative
+					right 10px
+
+			
+	.usuario
+		position absolute
+		right 1em
+		top 1em
+		img
+			border-radius 25px
+			margin-right -1em
+			position relative
+			vertical-align middle
+			width 50px
+			z-index 2
+
+		.flechita
+			background-color naranja
+			color white
+			padding 0.2em 0.1em 0.2em 0.8em
+			text-align right
+			&:after
+				content "\e602"
+				font-family icomoon
+
+nav
+	background-color azul
+	border-left solid white 15px
+	position relative
+	.menu
+		margin 0
+		padding 0
+
+
+		&:before
+			border-bottom transparent 15px solid
+			border-left white 7px solid
+			border-top transparent 15px solid
+			content ""
+			position absolute
+			top 0
+			
+	li
+		display inline-block
+		a
+			color white
+			display block
+			font-size 14px
+			padding 0.5em 1em
+			&:hover
+				background-color naranja
+
+.contenido
+	padding 0.5em
+	.post
+		background-color whitesmoke
+		border-radius  0 0 0.5em 0.5em
+		box-shadow 2px 2px 10px rgba(black,0.5)
+		color gris_texto
+		margin-bottom 1em
+		overflow hidden
+		.acciones
+			overflow hidden
+			padding 0.2em 1em 0.5em 0.2em
+			.datos
+				float right
+				.comentarios
+					background-color #707070
+					border-radius 2px
+					color white
+					font-size 0.8em
+					margin-right 1em
+					padding 0.1em 0.2em
+					position relative
+
+					&:before
+						border-left 5px solid transparent
+						border-right 5px solid transparent
+						border-top 5px solid #707070
+						content ""
+						position absolute
+						right 18%
+						top 100%
+				.estrella
+					&:before
+						color #FFBD14
+						content "\e601"
+						font-family icomoon
+						font-size 1.3em
+						vertical-align bottom
+				
+					
+			.votos
+				float left
+				.down
+				.up
+					font-family icomoon
+					font-size 1.5em
+					vertical-align bottom
+					
+				.down
+					&:before
+						color red
+						content "\e602"
+				.up
+					&:before
+						color green
+						content "\e603"
+						
+		.descripcion
+			border-bottom solid 3px azul
+			
+			figure
+				float left
+				height 160px
+				img
+					height 160px
+					width 80px
+			.detalles
+				margin-left 90px
+				height 160px
+				.autor
+					font-size 0.8em
+					a
+						color naranja
+				.fecha
+					float right
+					margin 0 1em 0 0
+				.tag
+					background-color azul
+					border-radius 5px
+					color white
+					padding 0 0.4em
+				.titulo
+					color gris_oscuro
+					font-size 1.2em
+					font-style italic
+					margin 0
+	
+				
+					
