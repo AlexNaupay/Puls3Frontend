@@ -68,14 +68,14 @@ header
 			#publicar
 				background-color naranja
 				border none
-				padding 0.1em 0.4em 0.1em 0.8em
+				padding 0.1em 0.4em 0.1em 0em
 				float right
 				text-shadow gris_oscuro 2px 2px 2px
 				&:before
 					content "\e600"
 					font-family icomoon
-					position relative
-					right 10px
+					margin-right 0.7em
+
 
 			
 	.usuario
@@ -212,6 +212,31 @@ nav
 					font-size 1.2em
 					font-style italic
 					margin 0
-	
-				
+
+@media screen and (min-width:768px)
+	body
+		max-width 1200px
+		margin 0 auto
+	.post
+		width 49%
+		display inline-block
+		&:nth-child(odd)
+			margin-right 1%
+
+	header
+		.titular
+			#publicar
+				position relative
+				width 100px
+				text-align right
+				&:before
+					font-size 2.5em
+					position absolute
+					top -15px
+					left -10px
+
+					
+			
+
+
 					
