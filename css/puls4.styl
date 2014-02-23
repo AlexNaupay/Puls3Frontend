@@ -9,6 +9,44 @@
 	font-style: normal;
 }
 
+@keyframes fadeDown{
+	from{
+		height: 145px;
+	}
+
+	50%{
+		height :50px;
+	}
+	70%{
+		height: 35px;
+	}
+
+	90%{
+		height: 15px;
+	}
+	to{
+		height: 0px;
+	}
+}
+@keyframes slideUp{
+	from{
+		height: 0px;
+	}
+
+	50%{
+		height: 15px;
+	}
+	70%{
+		height: 35px;
+	}
+
+	90%{
+		height :50px;
+	}
+	to{
+		height: 145px;
+	}
+}
 azul = #22BCE0
 gris_oscuro = #444
 gris_texto = #7A7A7A
@@ -130,6 +168,10 @@ nav
 
 .contenido
 	padding 0.5em
+	&:nth-child(1)
+		animation slideUp 0.5s;
+		-webkit-animation slideUp 0.5s;
+		-moz-animation slideUp 0.5s;
 	.post
 		background-color whitesmoke
 		border-radius  0 0 0.5em 0.5em
@@ -216,7 +258,11 @@ nav
 					font-style italic
 					margin 0
 .form
-	display block
+	animation slideUp 0.5s;
+	-webkit-animation slideUp 0.5s;
+	-moz-animation slideUp 0.5s;
+.form
+.ocultar
 	padding 0 1em
 	text-align right
 	input
@@ -233,6 +279,11 @@ nav
 		
 .hidden
 	display none
+.ocultar
+	animation fadeDown 0.5s;
+	-webkit-animation fadeDown 0.5s;
+	-moz-animation fadeDown 0.5s;
+
 @media screen and (min-width:768px)
 	body
 		max-width 1200px

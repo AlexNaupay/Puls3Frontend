@@ -4,8 +4,10 @@ var publicar = document.getElementById('publicar');
 publicar.addEventListener('click',function(){
 	var clase=formulario.className;
 	if(clase=='form'){
-		formulario.className = 'hidden';
+		formulario.className = 'ocultar';
+		setTimeout(function(){formulario.style.display='none';},500);
 	}else{
+		formulario.style.display='block'
 		formulario.className = 'form';
 	}
 });
@@ -23,9 +25,10 @@ formulario.addEventListener('submit',function(evento){
 	clone.getElementsByClassName('titulo')[0].textContent = titulo;
 	clone.getElementsByClassName('autor')[0].getElementsByTagName('a')[0].textContent = autor;
 	clone.getElementsByClassName('tag')[0].textContent = cat;
-
 	parent.insertBefore(clone,post); //params: insertado y referencia
-	this.className='hidden'; //Esconder el formulario
+
+	this.className='ocultar'; //Esconder el formulario
+	setTimeout(function(){formulario.style.display='none';},500);
 	return false;
 });
 
