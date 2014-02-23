@@ -28,3 +28,53 @@ formulario.addEventListener('submit',function(evento){
 	this.className='hidden'; //Esconder el formulario
 	return false;
 });
+
+
+/**
+  * Closure como fábrica de funciones */
+function createResizer(size){
+	return function (){
+		document.getElementsByTagName('body')[0].style.fontSize=size+'px';
+	};
+}
+
+HTMLCollection.prototype.each = Array.prototype.forEach; //No funciona en Chrome
+var sizes = document.getElementsByClassName('size')[0];
+/*sizes.getElementsByTagName('a').each(function(obj,pos){
+	var letra = obj.getAttribute('href').substring(1);
+	obj.addEventListener('click',createResizer(letra));
+	obj.style.fontSize = letra+'px';
+});*/
+var as = sizes.getElementsByTagName('a');
+for (var i=0 ;i<as.length; i++){
+	var letra = as[i].getAttribute('href').substring(1);
+	as[i].addEventListener('click',createResizer(letra));
+	as[i].style.fontSize = letra+'px';
+}
+
+/**
+   Closure para ocultar código
+*/
+function contador(vi){
+	var contador = vi||0;
+	return {
+		up: function(){return ++contador},
+		down: function(){return --contador}
+	};
+}
+
+var votos = document.getElementsByClassName('total');
+for(var i=0;i<votos.length;i++){
+	var obj=votos[i];
+	var contadorT = contador(obj.innerHTML); //Contador para cada voto
+	obj.nextElementSibling.addEventListener('click',function(eve){
+		eve.preventDefault();
+		this.previousElementSibling.innerHTML = contadorT.up();
+
+	});
+	obj.previousElementSibling.addEventListener('click',function(eve){
+		eve.preventDefault();
+		this.nextElementSibling.innerHTML = contadorT.down();
+
+	});
+}

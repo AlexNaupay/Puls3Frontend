@@ -76,6 +76,10 @@ header .titular div #publicar:before {
   font-family: icomoon;
   margin-right: 0.7em;
 }
+header .size a {
+  color: #f65527;
+  font-weight: bold;
+}
 header .usuario {
   position: absolute;
   right: 1em;
