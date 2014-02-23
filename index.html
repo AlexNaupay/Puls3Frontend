@@ -18,7 +18,7 @@
 			<h1>Puls4: Comunidad profesional de gente atractiva</h1>
 			<div>
 				<a href="#" class="filtro">Responsive Design</a>
-				<button id="publicar">Publicar</button>
+				<button id="publicar" draggable=true>Publicar</button>
 			</div>
 		</div>
 
@@ -37,6 +37,15 @@
 			<li><a href="#">NodeJS</a></li>
 		</ul>
 	</nav>
+<!-- 	FORMULARIO -->
+	<form id='form-registro'class='hidden' action="#">
+		<p><label for="titulo">Título: </label><input placeholder='Título' id='titulo'type="text"></p>
+		<p><label for="autor">Autor: </label><input placeholder='Autor' id='autor' type="text"></p>
+		<p><label for="cat">Categoría </label><input placeholder='Categoría' id='cat'type="text"></p>
+		<p><input type="submit" value='Publicar'></p>
+	</form>
+
+
 <!-- SECTION -->
 	<section class='contenido'>
 		<article class='post'>
@@ -183,6 +192,7 @@
 			<strong>Powered by Alex</strong>
 			<span class="mejor">mejorandola 2014</span>
 		</h3>
-
 	</footer>
+	<script src='./js/script.js'></script>
 </body>
+</html>
